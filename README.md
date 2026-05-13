@@ -1,6 +1,8 @@
 # Automação Jetimob V2 - Guia de Execução e Deploy
 
-Este guia explica como rodar a automação no seu MacBook (macOS) e como subir para uma VPS (Linux) para execução diária às 01:00 AM.
+![Run Jetimob Automation](https://github.com/miraelsantos23-pixel/automacao_Openhouse/actions/workflows/main.yml/badge.svg)
+
+Este guia explica como rodar a automação localmente e como acompanhar a execução automática via GitHub Actions às 23:00 (GMT-3).
 
 ## 🍎 Executando no MacBook (macOS)
 
@@ -47,7 +49,7 @@ Uma vez dentro da VPS, navegue até a pasta e rode:
 docker-compose up -d --build
 ```
 
-**Nota:** No modo VPS, a automação ficará ativa e executará todos os dias às **01:00 AM**.
+**Nota:** No modo VPS ou GitHub Actions, a automação executará todos os dias às **23:00 (GMT-3)**.
 
 ---
 
