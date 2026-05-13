@@ -1,0 +1,13 @@
+services:
+  jetimob-automation:
+    build: .
+    container_name: jetimob_automation
+    volumes:
+      - .:/app
+    # Caso queira persistir os arquivos de progresso e json localmente:
+    # volumes:
+    #   - ./imoveis.json:/app/imoveis.json
+    #   - ./jetimob_progresso.json:/app/jetimob_progresso.json
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
