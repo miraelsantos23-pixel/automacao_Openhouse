@@ -33,3 +33,17 @@ jobs:
           JETIMOB_PASSWORD: ${{ secrets.JETIMOB_PASSWORD }}
           DOCKER_ENV: "1" # Ensures no GUI and runs once
         run: python main.py
+
+      - name: Upload Logs and Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: execution-reports
+          path: |
+            relatorio_execucao.txt
+            jetimob_erros.json
+            jetimob_progresso.json
+            err.txt
+            imoveis_nao_encontrados.txt
+            *.png
+          retention-days: 7
