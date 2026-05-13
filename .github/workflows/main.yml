@@ -2,8 +2,8 @@ name: Run Jetimob Automation
 
 on:
   schedule:
-    # 23:00 GMT-3 is 02:00 UTC next day
-    - cron: '0 2 * * *'
+    # 23:42 GMT-3 is 02:42 UTC
+    - cron: '42 2 * * *'
   workflow_dispatch: # Allow manual trigger
 
 jobs:
